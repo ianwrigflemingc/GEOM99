@@ -1,8 +1,6 @@
 /* ------ CSS for body, headings, and paragraphs 
 Created by Melanie Ouellette on December 1, 2020.
-Colour palette inspired by Juniper & Roots "5 Earth-Toned Minimalistic Colour Palettes",
-url: https://juniperandroots.com/blog/earthy-colour-palettes;
-Last Modified December 7, 2020*/
+Last Modified April 13, 2021*/
 * {
   margin: 0;
   padding: 0;
@@ -70,7 +68,7 @@ h3 {
 }
 h4 {
   display: block;
-  color: #3a3835;
+  color: #81786c;
   font-family: "Montserrat", Helvetica, sans-serif;
   text-align: center;
   font-size: 18px;
