@@ -89,7 +89,7 @@ p {
 /* background image sourced from Pixabay: https://pixabay.com/ */
 header {
   display: block;
-  text-align: center;
+  text-align: right;
   background-image: url("../images/GEOM99_HeaderImage8.jpg");
 }
 /* Labels for images in Index */
