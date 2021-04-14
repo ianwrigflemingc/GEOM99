@@ -16,7 +16,7 @@ function w3_open() {
   x.style.display = "block";
 }
 
-// Close side navigation
+// Close side navigation hamburger
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
