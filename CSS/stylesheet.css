@@ -111,6 +111,7 @@ header {
   font-family: "Montserrat", Helvetica, sans-serif;
   text-align: right;
   margin: 10%;
+  padding: 2%;
   
 }
 
@@ -120,12 +121,16 @@ header {
   font-family: "Montserrat", Helvetica, sans-serif;
   text-align: left;
   margin:10%;
+  padding: 2%;
   
 }
 
 img.left {
 	display: inline;
 	float:left;
+  width: 50%;
+  max-width: 750px;
+  max-height:50%;
 	border-style: solid;
 	border-width: 5px;
 	border-color: #f5f1ea;
@@ -135,6 +140,9 @@ img.left {
 img.right {
 	display: inline;
 	float:right;
+  width: 50%;
+  max-width: 750px;
+  max-height: 50%;
 	border-style: solid;
 	border-width: 5px;
 	border-color: #f5f1ea;
@@ -307,8 +315,10 @@ CSS and W3Schools */
 }
 
 .responsive5 {
-  width: 100%;
+  width: 70%;
   height: auto;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .contact1 {
@@ -330,6 +340,7 @@ CSS and W3Schools */
 
 
 footer {
+  display: block;
   font-family: "Montserrat";
   text-align: center;
   font-weight: bolder;
