@@ -31,9 +31,13 @@
   </a>
 </div>
 
-<h1 class="highlight"> Project Issues</h1> 
+<h1 class="highlight">Issues and Technical Challenges</h1> 
 
-<h3>Enter text here</h3>
+<h3>A significant portion of this project involved exploring the AGOL Experience 
+  Builder options available to best showcase information on Ontario’s forest resources. 
+  Several issues and technical challenges were discovered as part of this exploratory process 
+  including the importance of data preprocessing, issues working collaboratively on one web solution, 
+  and configuration of the final product.</h3>
 
 <div class="row">
   <div class="column1">
@@ -44,16 +48,31 @@
       2 of which needed to be merged (the wood report text file and the FMU shapefile). However, after the join was 
       completed there were more than a few records of missing data for the forests, and some of the forests didnt have 
       any information on the available wood. So additional research was needed to fill in the blanks.</p>
+      <p>***MAYBE-Add in this section the importance of pre-joining layers that you want connected for functionality in the experience builder. </p>
+      <p>Example: To make the contact information table in the final solution have the “Action” functionality of zooming to 
+        the corresponding FMU on the map when the contact for the FMU is selected in the table widget, the data must be within 
+        the same layer. The contact info table and the FMU layer must be joined through a common field before the data is integrated into 
+        Experience Builder. Experience builder does not have functionality to complete this join. If we were to complete this project again, 
+        we would complete this join in ArcGIS Pro to allow for added functionality with the table widget.</p>
   </div>
 
   <div class="column1">
     <h2>Collaborative Functionality</h2>
     <img src="images/Location-Allocation-Network-Analysis.png" alt="allocation" class="responsive5"> 
-    <p> In Experience Builder, you can not work collaboratively on a project (well, atleast efficiently).</p>
+    <p>Out next technical challenge was to figure out a way to all effectively work on configuring one web application. 
+      Initially, one person created the experience builder and associated web map in their own account and shared it to our AGOL group, 
+      ensuring the Experience Builder was set to published. This allowed others in our group to view the experience, however we ran into an 
+      access warning which did not allow editing of the app by the other team members. </p>
+      <p>Since creating a copy of the app was still accessible, our work-around solution was to create a copy of the most current version, 
+        and ensure we communicated which working version was the newest and what updates were applied.</p>
+      <p>With the recent update of AGOL the editing abilities appear to have also changed. We are no longer experiencing access limitations, 
+        and all members can edit the same published and shared experience builder app. This has increased our efficiency and ability to collaborate 
+        to finalize the solution. Communication between contributors is still key, as editing the same features at the same time can cause 
+        conflicts.</p>
   </div>
   
   <div class="column1">
-    <h2>Header</h2>
+    <h2>Configuring Widget Pop-Ups</h2>
     <img src="images/Service-Areas-Network-Analysis.png" alt="service area" class="responsive5"> 
     <p> Enter text here</p>
         
