@@ -53,17 +53,45 @@
 
 <div class="containerleft">
   <h1>Finding and Processing the Data</h1>
-  <img class="left" src="images\FindingData_Excel.png" alt="Finding Available Wood Report">
+  <img class="left" src="images\OntarioGeohub.JPG" alt="Geohub logo">
   <p>After deciding on Experience Builder as our platform, we had to find and process the Data using 
-    ArcPro. Ontario GeoHub and Data Catalogue had the data we needed, consisting of:</p>
-    <ul class="basic">
+    ArcPro. Ontario GeoHub and Data Catalogue had the data we needed, consisting of (links provided):</p>
+    <ol>
       <li><a href="https://geohub.lio.gov.on.ca/datasets/forest-management-unit?geometry=-151.490%2C38.917%2C-17.984%2C58.786" target="_blank">Forest Management Units (Shapefile)</a></li>
       <li><a href="https://data.ontario.ca/dataset/available-wood-report" target="_blank">Ontario Wood Report (Excel file)</a></li>
       <li><a href="https://geohub.lio.gov.on.ca/datasets/forest-processing-facility?geometry=-151.490%2C38.917%2C-17.984%2C58.786"target="_blank">Forest Processing Facilities (Shapefile)</a></li>
-    </ul>
-
+    </ol>
+  
+  <img class="left" src="images\FindingData_Excel.png" alt="Finding Available Wood Report">
+  <p>Luckily the Processing Facility shapefile was ready to add to our AGOL group content as a Feature Layer. 
+    However, the other two layers required processing in ArcPro first.</p>
+  <p>The first step was to reformat the Available Wood report. This consisted of copying and pasting the rows 
+    and columns that we needed into a new excel sheet. Because the end goal was to export the excel file as a .CSV, 
+  the column headers also had to distinguish which species were merchantable vs unmerchantable.</p>
+  
   <img class="left" src="images\FindingData_ArcPro.png" alt="ArcPro processing">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor, libero sed dignissim porta, dui eros aliquet justo, a consequat justo arcu et sapien. Nam nisi justo, pellentesque eget metus vel, convallis iaculis arcu. Integer rutrum ipsum at hendrerit fermentum. Aliquam accumsan, nisl eget porttitor volutpat, risus neque aliquam velit, sed aliquam ex nibh id dui. Quisque arcu diam, ultrices sit amet magna aliquet, mollis porta arcu. Morbi tristique nunc finibus enim convallis, vel sagittis lectus vehicula. Nam vel hendrerit neque. Pellentesque sed ultricies elit. Cras interdum vel velit eu fermentum. Aenean nec urna maximus, aliquam felis eget, vestibulum massa. Quisque accumsan tortor cursus, dapibus erat condimentum, elementum lacus. Cras sodales felis faucibus, ultrices ipsum nec, molestie est. Etiam quis vehicula metus. Nullam vel lacinia erat. Nam fermentum nunc eu volutpat porttitor. Phasellus a dictum est.</p>
+  <p>Once the .CSV file was ready, I was able to bring it into my ArcPro workspace along with the Forest Management 
+    Units layer. The following were the steps taken in ArcPro:</p>
+    <ol>
+      <li><b>Join Data:</b> Right click on the feature layer > Joins and Relates > Add Join</li>
+      <p>Once the geoprocessing tool opens: FMU layer as the Layer Name, FMU_Name as Input Joing Field, Wood Report 
+        as Join Table, and Forest Unit Name(In our case) as the matching Output Join Field</p>
+      <li><b>Make Feature Layer:</b> Because we wanted the convenience of having all the data in one feature class 
+        to query in Experience Builder, the joined data (temporary file) was made into a permanent feature class. 
+        First in the geoprocessing tools, click on 'Make Feature Layer' tool. Then enter the FMU layer as input 
+        features, and the output layer will generate automatically. This tool only creates a temporary (intermediate) file. 
+        This tool also allows you to decide which fields you want to carry forward, or whether you want to nix them. </li>
+      <li><b>Feature Class to Feature Class:</b> Next step is to export the temporary layer created in the previous step 
+        as a feature class to make it permanent using the 'Feature Class to Feature Class tool'.</li>
+      <li><b>Share as a Web Layer:</b> The last step was to get the new merge feature class onto the AGOL group account. 
+        There are two options:</li>
+        <ul class="basic">
+          <li>We could have logged on to ArcGIS Online and added the layer on the 'My Content' web page through and then 
+            Add Item > From your computer, and finally shared to the group, or;</li>
+          <li>Simply <b>Share as a Web Layer</b> under 'Share'. This allows you to not only upload the layer to your 
+            own content, but also directly to the group folder. Much easier!</li>
+        </ul>
+    </ol>
 </div>
 
 
@@ -88,7 +116,6 @@
         information on the available wood resources for the area. For the FMU pop-ups, we also included a pie chart to display the total merchantable 
         and unmerchantable timber resources and text boxes to further explain the information displayed.</li>
   </ol>
-  
 </div>
 
 
@@ -96,25 +123,28 @@
 <div class="containerleft">
   <h1>Configuring Experience Builder</h1>
   <img class="left" src="images\EB_widgets.jpg" alt="Configured Widgets">
-  <p>1) Select a Template: We chose to use the Launchpad ESRI template which has an emphasis on the map and a controller widget anchored at the 
+  <ol>
+  <li><b>Select a Template:</b> We chose to use the Launchpad ESRI template which has an emphasis on the map and a controller widget anchored at the 
     bottom of the page to get us started with building our application, however we turned off the “lock layout” option so we could further customize 
-    the experience.</p>
-  <p>2) Configure Map: The web map displaying the forest resource layers rendered in the previous task was added to the experience as the main map layer 
-    and the default view was adjusted.</p>
-  <p>3) Update Branding: To maintain consistency with our teams branding schema, the default colours and text were updated & an image widget containing 
-    our logo was added.</p>
-  <p>4) Configure Widgets: We chose to add five widgets to the controller widget at the bottom of the screen to add interactivity to our experience. The 
-    following widgets were configured.</p>
-  <p>a) Map Layers: The map layers widget is connected to the map and allows the user to turn on and off the FMU polygon layer and the forest processing 
-    facility point layer.</p>
-  <p>b) Legend: The legend widget displays the symbology for the two forest resource layers on the map.</p>
-  <p>c) Table: The contact information table displays the contact information for each FMU. This table has a search function which allows the user to 
-    search for information using either the FMU name or contact name.</p>
-  <p>d) Filter: The filter widget is connected to the forest processing facility point layer and allows the user to display only the selected facility 
-    types on the map.</p>
-  <p>e) Bookmark: The bookmark widget was configured to display the four main regions of Ontario. The map zooms to the pre-set area when the user selects 
-    a region from the bookmark.</p>
-  <p>The screen capture on the left depicts the widgets within the final solution.</p>
+    the experience.</li>
+  <li><b>Configure Map:</b> The web map displaying the forest resource layers rendered in the previous task was added to the experience as the main map layer 
+    and the default view was adjusted.</li>
+  <li><b>Update Branding:</b> To maintain consistency with our teams branding schema, the default colours and text were updated & an image widget containing 
+    our logo was added.</li>
+  <li><b>Configure Widgets:</b> We chose to add five widgets to the controller widget at the bottom of the screen to add interactivity to our experience. The 
+    following widgets were configured.</li>
+    <ul class="basic">
+      <li><b>Map Layers:</b> The map layers widget is connected to the map and allows the user to turn on and off the FMU polygon layer and the forest processing 
+        facility point layer.</li>
+      <li><b>Legend:</b> The legend widget displays the symbology for the two forest resource layers on the map.</li>
+      <li><b>Table:</b> The contact information table displays the contact information for each FMU. This table has a search function which allows the user to 
+        search for information using either the FMU name or contact name.</li>
+      <li><b>Filter:</b> The filter widget is connected to the forest processing facility point layer and allows the user to display only the selected facility 
+        types on the map.</li>
+      <li><b>Bookmark:</b> The bookmark widget was configured to display the four main regions of Ontario. The map zooms to the pre-set area when the user selects 
+        a region from the bookmark.</li>
+    </ul>
+  </ol>
 </div>
 
 <div class="containerleft">
