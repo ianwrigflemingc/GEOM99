@@ -104,6 +104,21 @@ header {
    
 }
 
+/* Basic List */
+
+ul.basic {
+	display: block;
+  font-family: "Montserrat", Helvetica, sans-serif;
+  color: #fcf3e3;
+  font-weight: lighter;
+  font-size: 15px;
+	list-style-type:circle;
+}
+li.basic {
+	margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 /* For the div element on the process page. Mel April 14, 2021 */
 .containerright {
   display: block;
