@@ -70,15 +70,34 @@
       user-friendly titles so that they can be easily interpreted.</p>
     <p>5) Configure Pop-Ups: Fields to be included in the pop-up windows for both layers were selected based on what information was relevant 
       to the end-user. For the facility layer we chose to include information such as the facility type, owner, identification, location, and 
-      operating status. For the FMU layer, we chose to include both management information such as the FMU name, area, and licence holder, and 
+      operating status. For the FMU layer, we chose to include management information such as the FMU name, area, and licence holder, and 
       information on the available wood resources for the area. For the FMU pop-ups, we also included a pie chart to display the total merchantable 
       and unmerchantable timber resources and text boxes to further explain the information displayed.</p>
+    <p>The screen capture on the right depicts the Map Viewer Beta environment and the configuration of pup-ups for the FMU layer.</p>
 </div>
 
 <div class="containerright">
-  <h1>Using Experience Builder</h1>
-  <img class="left" src="images\Placeholder.JPG" alt="This is a Placeholder">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor, libero sed dignissim porta, dui eros aliquet justo, a consequat justo arcu et sapien. Nam nisi justo, pellentesque eget metus vel, convallis iaculis arcu. Integer rutrum ipsum at hendrerit fermentum. Aliquam accumsan, nisl eget porttitor volutpat, risus neque aliquam velit, sed aliquam ex nibh id dui. Quisque arcu diam, ultrices sit amet magna aliquet, mollis porta arcu. Morbi tristique nunc finibus enim convallis, vel sagittis lectus vehicula. Nam vel hendrerit neque. Pellentesque sed ultricies elit. Cras interdum vel velit eu fermentum. Aenean nec urna maximus, aliquam felis eget, vestibulum massa. Quisque accumsan tortor cursus, dapibus erat condimentum, elementum lacus. Cras sodales felis faucibus, ultrices ipsum nec, molestie est. Etiam quis vehicula metus. Nullam vel lacinia erat. Nam fermentum nunc eu volutpat porttitor. Phasellus a dictum est.</p>
+  <h1>Configuring Experience Builder</h1>
+  <img class="left" src="images\EB_widgets.JPG" alt="Configured Widgets">
+  <p>1) Select a Template: We chose to use the Launchpad ESRI template which has an emphasis on the map and a controller widget anchored at the 
+    bottom of the page to get us started with building our application, however we turned off the “lock layout” option so we could further customize 
+    the experience.</p>
+  <p>2) Configure Map: The web map displaying the forest resource layers rendered in the previous task was added to the experience as the main map layer 
+    and the default view was adjusted.</p>
+  <p>3) Update Branding: To maintain consistency with our teams branding schema, the default colours and text were updated & an image widget containing 
+    our logo was added.</p>
+  <p>4) Configure Widgets: We chose to add five widgets to the controller widget at the bottom of the screen to add interactivity to our experience. The 
+    following widgets were configured.</p>
+  <p>a) Map Layers: The map layers widget is connected to the map and allows the user to turn on and off the FMU polygon layer and the forest processing 
+    facility point layer.</p>
+  <p>b) Legend: The legend widget displays the symbology for the two forest resource layers on the map.</p>
+  <p>c) Table: The contact information table displays the contact information for each FMU. This table has a search function which allows the user to 
+    search for information using either the FMU name or contact name.</p>
+  <p>d) Filter: The filter widget is connected to the forest processing facility point layer and allows the user to display only the selected facility 
+    types on the map.</p>
+  <p>e) Bookmark: The bookmark widget was configured to display the four main regions of Ontario. The map zooms to the pre-set area when the user selects 
+    a region from the bookmark.</p>
+  <p>The screen capture on the left depicts the widgets within the final solution.</p>
 </div>
 
 <div class="containerleft">
