@@ -44,13 +44,13 @@
   <img class="left" src="images\FlemingandCRIBE.jfif" alt="Topic">
   <p>Our assignment to build an application using technologies of our choice presented the perfect opportunity to lay the 
     groundwork and gain experience for the future design and completion of our collaborative project.</p>
-  <p>Based on the needs previously established with the Centre for Research and Innovation into the Bio-Economy (CRIBE), 
+  <p>Based on the needs previously established with the Centre for Research and Innovation in the Bio-Economy (CRIBE), 
     our team decided to refine the scope of the collaborative project down to a manageable size. The refining process took 
     a few attempts as we considered the different useful forestry applications such as, routing, least cost path analysis, 
-    facility locations, biomass availability and Ontario forest management unit (fmu) boundaries.</p>
+    facility locations, biomass availability and Ontario forest management unit (FMU) boundaries.</p>
   <p>In the end, our group decided to focus on creating a forestry infographic designed to present the end user with 
-    beneficial information about forestry facility locations found throughout Ontario accompanied by the Ontario fmu 
-    boundaries and its corresponding biomass information.</p>
+    beneficial information about forestry facility locations found throughout Ontario accompanied by the Ontario FMU 
+    boundaries and its corresponding wood biomass information.</p>
 </div>
 
 <div class="containerleft">
@@ -73,7 +73,7 @@
 <div class="containerleft">
   <h1>Finding and Processing the Data</h1>
   <img class="left" src="images\OntarioGeohub.JPG" alt="Geohub logo">
-  <p>After deciding on Experience Builder as our platform, we had to find and process the Data using 
+  <p>After deciding on Experience Builder as our platform, we had to find and process the data using 
     ArcPro. Ontario GeoHub and Data Catalogue had the data we needed, consisting of (links provided):</p>
     <ol>
       <li><a href="https://geohub.lio.gov.on.ca/datasets/forest-management-unit?geometry=-151.490%2C38.917%2C-17.984%2C58.786" target="_blank">Forest Management Units (Shapefile)</a></li>
@@ -89,7 +89,7 @@
   the column headers also had to distinguish which species were merchantable vs unmerchantable.</p>
   
   <img class="left" src="images\FindingData_ArcPro.png" alt="ArcPro processing">
-  <p>Once the .CSV file was ready, I was able to bring it into my ArcPro workspace along with the Forest Management 
+  <p>Once the .CSV file was ready, we were able to bring it into an ArcPro workspace along with the Forest Management 
     Units layer. The following were the steps taken in ArcPro:</p>
     <ol>
       <li><b>Join Data:</b> Right click on the feature layer > Joins and Relates > Add Join. Once the geoprocessing tool opens: FMU layer as the Layer Name, FMU_Name as Input Joing Field, Wood Report 
@@ -127,12 +127,12 @@
       <li><b>Set Symbology:</b> The FMU layer was displayed as a solid outline to show the bounds of the management unit. Each processing facility was displayed
          with a unique colour based on the facility type, and then further categorised by shape to help users differentiate between the sites. </li>
       <li><b>Edit Fields:</b> Many of the field names associated with the data layers were coded, so the field names for both layers were edited into 
-        user-friendly titles so that they can be easily interpreted.</li>
+        user-friendly titles so that the information can be easily interpreted.</li>
       <li><b>Configure Pop-Ups:</b> Fields to be included in the pop-up windows for both layers were selected based on what information was relevant 
         to the end-user. For the facility layer we chose to include information such as the facility type, owner, identification, location, and 
         operating status. For the FMU layer, we chose to include management information such as the FMU name, area, and licence holder, and 
         information on the available wood resources for the area. For the FMU pop-ups, we also included a pie chart to display the total merchantable 
-        and unmerchantable timber resources and text boxes to further explain the information displayed.</li>
+        and unmerchantable timber resources in each FMU and text boxes to further explain the information displayed.</li>
   </ol>
 </div>
 
@@ -142,15 +142,15 @@
   <h1>Configuring Experience Builder</h1>
   <img class="left" src="images\EB_widgets.jpg" alt="Configured Widgets">
   <ol>
-  <li><b>Select a Template:</b> We chose to use the Launchpad ESRI template which has an emphasis on the map and a controller widget anchored at the 
+  <li><b>Select a Template:</b> We chose to use the ESRI "Launchpad" template which has an emphasis on the map and a controller widget anchored at the 
     bottom of the page to get us started with building our application, however we turned off the “lock layout” option so we could further customize 
     the experience.</li>
   <li><b>Configure Map:</b> The web map displaying the forest resource layers rendered in the previous task was added to the experience as the main map layer 
     and the default view was adjusted.</li>
-  <li><b>Update Branding:</b> To maintain consistency with our teams branding schema, the default colours and text were updated & an image widget containing 
+  <li><b>Update Branding:</b> To maintain consistency with our team's branding schema, the default colours and text were updated & an image widget containing 
     our logo was added.</li>
   <li><b>Configure Widgets:</b> We chose to add five widgets to the controller widget at the bottom of the screen to add interactivity to our experience. The 
-    following widgets were configured.</li>
+    following widgets were configured:</li>
     <ul class="basic">
       <li><b>Map Layers:</b> The map layers widget is connected to the map and allows the user to turn on and off the FMU polygon layer and the forest processing 
         facility point layer.</li>
@@ -163,7 +163,7 @@
         a region from the bookmark.</li>
     </ul>
   </ol>
-</div>
+  </div>
 
 <div class="containerleft">
   <h1>Showcasing the Final Solution</h1>
@@ -176,13 +176,13 @@
   <h3>The image above is what the user sees when they first open the platform. Simple and easy to use, to not overwhelm the user when they first 
     open it. Note the widgets in the lower left side.</h3>
   <img class="responsive5" src="images\FinalSolution_Contact.JPG" alt="Forest Manager Contact">
-  <h3>With experience builder we were able to include simple tables. The image above shows contact information for the Forest Managers at each of the 
-    processing facilities. This could have been improved by joining this table to the processing facility feature class.</h3>
+  <h3>With experience builder we were able to include simple tables. The image above shows contact information of the managers for each FMU. This could
+     have been improved by joining the table to the FMU polygon layer in the data processing phase.</h3>
   <img class="responsive5" src="images\FinalSolution_Filter.JPG" alt="Filter Processing Facilities">
-  <h3>One handy feature of experience builder is you can add in filter widgets, as seen above. The user can specify a facility type depending on 
-    their needs, and the map will only display that selection</h3>
+  <h3>One handy feature of experience builder is that you can add in filter widgets, as seen above. The user can specify a facility type depending on 
+    their needs, and the map will only display that selection.</h3>
   <img class="responsive5" src="images\FinalSolution_RegionalBookmark.JPG" alt="Regional Forest Bookmarks">
-  <h3>Users can also toggle through Regional Bookmarks - Consisting of Northwestern, Northeastern, Central, and Southern Ontario</h3>
+  <h3>Users can also toggle through Regional Bookmarks - Consisting of Northwestern, Northeastern, Central, and Southern Ontario.</h3>
 
   <h2><a href="solution">Jump to the Group Solution in Experience Builder now!</a></h2>
 </div>
